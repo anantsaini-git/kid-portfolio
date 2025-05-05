@@ -1,14 +1,14 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./../common/galleryImage.css";
 
 function Gallery() {
     const images = [
-        "/home/inbasdlp14790/Downloads/4.jpg",
-        "image2.jpg",
-        "image3.jpg",
-        "././images/5.png",
-        "/home/inbasdlp14790/Code/b2c/kid-portfolio/src/images/5.png"
+        require("./../images/1.jpeg"),
+        require("./../images/2.jpeg"),
+        require("./../images/3.jpeg"),
+        require("./../images/4.jpeg")
     ];
 
     const settings = {
@@ -17,13 +17,16 @@ function Gallery() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        adaptiveHeight: false
     };
+
 
     return (
         <Slider {...settings}>
             {images.map((image, index) => (
-                <div key={index}>
-                    <img src={image} alt={`Gallery ${index}`} />
+                <div key={index} className="image-container">
+                    {<img src={image} alt={`Gallery ${index}`} />}
+
                 </div>
             ))}
         </Slider>

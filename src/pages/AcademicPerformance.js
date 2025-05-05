@@ -3,6 +3,7 @@ function AcademicPerformance() {
         { name: "Math", grade: "A+" },
         { name: "Science", grade: "A" },
         { name: "English", grade: "A-" },
+        { name: "SUPW", grade: "A+" }
     ];
 
     return (
