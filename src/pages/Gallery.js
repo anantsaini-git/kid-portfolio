@@ -25,7 +25,7 @@ function Gallery() {
         <Slider {...settings}>
             {images.map((image, index) => (
                 <div key={index} className="image-container">
-                    {<img src={image} alt={`Gallery ${index}`} />}
+                    {<img src={image} alt={`Gallery ${index}`}/>}
 
                 </div>
             ))}
